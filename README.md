@@ -1,1 +1,3 @@
-# play-scala-ex
+# play-scala-book
+
+repo for play-scala book
