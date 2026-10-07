@@ -1,0 +1,9 @@
+@(config: play.api.Configuration)(implicit request: RequestHeader,messages: Messages)
+
+<footer>
+    Application language,
+    set from request
+    lang = @messages.lang.code,
+    user = @config.get[String]("environment.user"),
+    date = @(new java.util.Date().format("yyyy-MM-dd HH:mm"))
+</footer>

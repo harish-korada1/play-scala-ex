@@ -1,0 +1,17 @@
+@(products: List[Product],config: play.api.Configuration)(implicit request: RequestHeader,messages: Messages)
+
+@main(Messages("application.name"),config) {
+
+<dl class="products">
+    @for(product <- products){
+    <dt>@product.name</dt>
+    <dt>@product.description</dt>
+    }
+</dl>
+
+<p>
+    <a href="@controllers.routes.ProductsController.newProduct()"
+       class="btn">
+        <i class="icon-plus"></i> @Messages("products.new.command")</a>
+</p>
+}

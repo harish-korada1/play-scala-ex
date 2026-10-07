@@ -1,0 +1,24 @@
+@(productForm: Form[Product], config: play.api.Configuration)(implicit request: RequestHeader,messages: Messages)
+
+@main(Messages("products.form"), config) {
+<h2>@Messages("products.form")</h2>
+
+    @helper.form(action = routes.ProductsController.save()) {
+        @helper.CSRF.formField
+
+        <fieldset>
+            <legend>
+                @Messages("products.details", Messages("products.new"))
+            </legend>
+
+            @helper.inputText(productForm("ean"))
+            @helper.inputText(productForm("name"))
+            @helper.textarea(productForm("description"))
+        </fieldset>
+
+        <p>
+            <input type="submit" class="btn btn-primary"
+                   value='@Messages("products.new.submit")'>
+        </p>
+    }
+}

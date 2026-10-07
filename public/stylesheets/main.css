@@ -1,0 +1,49 @@
+body {
+    color: black;
+}
+
+body,
+p,
+label {
+    font-size: 15px;
+}
+
+div.screenshot {
+    width: auto;
+    max-width: 800px;
+    margin: 20px;
+    background-color: #D0E7EF;
+}
+
+.screenshot > .container {
+    width: auto;
+    padding: 20px;
+}
+
+.navbar-fixed-top .navbar-inner {
+    padding-left: 20px;
+}
+
+.navbar .nav > li > a {
+    color: #bbb;
+}
+
+
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+    position: relative;
+}
+
+/* Fix Play 3 form-helper alignment */
+fieldset dl {
+    margin: 12px 0;
+}
+
+fieldset dl dt,
+fieldset dl dd {
+    margin-left: 0;
+}
+
+fieldset dl dd.info {
+    margin-top: 4px;
+}
